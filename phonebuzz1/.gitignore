@@ -1,8 +1,12 @@
 ### Python template
+.idea
+db.sqlite3
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
 
 # C extensions
 *.so
@@ -22,7 +26,7 @@ sdist/
 var/
 *.egg-info/
 .installed.cfg
-*.egg 
+*.egg
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
