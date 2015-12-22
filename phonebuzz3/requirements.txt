@@ -1,0 +1,5 @@
+twilio
+django-twilio
+django-phonenumber-field
+celery
+django-durationfield
