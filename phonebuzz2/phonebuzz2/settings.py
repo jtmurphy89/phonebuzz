@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TWILIO_ACCOUNT_SID = os.environ['TWILIO_ACCOUNT_SID']
+TWILIO_AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
+TWILIO_NUMBER = os.environ['TWILIO_NUMBER']
+TWILIO_URL = os.environ['TWILIO_URL']
+TWILIO_VOICE_URL = TWILIO_URL + '/voice/'
 
 # Application definition
 
@@ -37,6 +42,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'twilio',
+    'django_twilio',
+    'phonenumber_field',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +63,7 @@ ROOT_URLCONF = 'phonebuzz2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
