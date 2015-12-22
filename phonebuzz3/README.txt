@@ -13,6 +13,7 @@
 
 (4) With luck and a fair wind, the server should now be running. Open a new tab and start the celery worker:
 
+        user$: source .env
         user$: celery -A phonebuzz3 worker -l info
 
 (5) Again, with a bit of luck and hopping up and down on one foot while chanting in sanskrit, the celery worker should be running and you can head over to http://localhost:8000 to schedule some phonebuzz calls in the future

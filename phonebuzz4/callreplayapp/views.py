@@ -46,7 +46,7 @@ def replay(request, pk):
     input = twilio_call.input + '/'
     replay_call = TwilioCall(
         phone_number=twilio_call.phone_number,
-        input="N/A"
+        input=twilio_call.input
     )
     replay_call.save()
     call_url = settings.TWILIO_REPLAY_URL + input

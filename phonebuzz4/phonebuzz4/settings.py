@@ -27,10 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
-TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
-TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
-TWILIO_URL = os.environ.get('TWILIO_URL')
+TWILIO_ACCOUNT_SID = os.environ['TWILIO_ACCOUNT_SID']
+TWILIO_AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
+TWILIO_NUMBER = os.environ['TWILIO_NUMBER']
+TWILIO_URL = os.environ['TWILIO_URL']
 TWILIO_VOICE_URL = TWILIO_URL + '/voice/'
 TWILIO_REPLAY_URL = TWILIO_URL + '/read/'
 
@@ -48,7 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'twilio',
     'django_twilio',
-    'callandreplayapp',
+    'callreplayapp',
     'durationfield',
 )
 
