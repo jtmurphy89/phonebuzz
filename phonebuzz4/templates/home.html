@@ -1,0 +1,66 @@
+{% extends "_base.html" %}
+
+
+{% block content %}
+
+    <h2 align="center">Schedule a Forced Game of PhoneBuzz!</h2>
+
+    <br>
+
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="phone_number">Phone Number:</label>
+
+            <div class="col-sm-10">
+                <input name="phone_number" class="form-control input-lg" type="text" placeholder="+15555555555"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="time_delay_field">Delay From Now:</label>
+
+            <div class="col-sm-10">
+                <input name="time_delay_field" class="form-control input-lg" type="text" placeholder="DD days HH:MM:SS"
+                       required>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success btn-lg" value="Call">
+    </form>
+
+    <br>
+    <hr>
+
+    <h2 align="center">PhoneBuzz History</h2>
+
+    <br>
+
+    <br>
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Phone number</th>
+                <th>Time Delay</th>
+                <th>Call Made at</th>
+                <th>User Input</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for call in call_history %}
+                <tr>
+                    <td>{{ call.phone_number }}</td>
+                    <td>{{ call.time_delay }}</td>
+                    <td>{{ call.call_made }}</td>
+                    <td>{{ call.input }}</td>
+                    <td>
+                        <a class="btn btn-default btn-xs" href="{% url 'replay' call.pk %}">Replay Call</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock content %}
