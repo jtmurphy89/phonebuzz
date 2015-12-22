@@ -1,3 +1,5 @@
+(0) Open a new tab in your terminal
+
 (1) With ngrok running, open .env and supply the necessary env variables (TWILIO_NUMBER is the twilio phone number
     to initiate the call and TWILIO_URL is just the ngrok http url)
 
