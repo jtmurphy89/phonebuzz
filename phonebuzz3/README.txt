@@ -1,7 +1,6 @@
 (0) Open a new tab in your terminal
 
-(1) Download and install RabbitMQ (instructions here: http://www.rabbitmq.com/download.html). Make sure to chown
-    the .erlang_cookie file:
+(1) Download and install RabbitMQ (instructions here: http://www.rabbitmq.com/download.html). Make sure to chown the .erlang_cookie file:
 
         user$: cd ~
         user$: chown $USER .erlang_cookie
@@ -16,5 +15,4 @@
 
         user$: celery -A phonebuzz3 worker -l info
 
-(5) Again, with a bit of luck and hopping up and down on one foot while chanting in sanskrit, the celery worker should
-    be running and you can head over to http://localhost:8000 to schedule some phonebuzz calls in the future
+(5) Again, with a bit of luck and hopping up and down on one foot while chanting in sanskrit, the celery worker should be running and you can head over to http://localhost:8000 to schedule some phonebuzz calls in the future
