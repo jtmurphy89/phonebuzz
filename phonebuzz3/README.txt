@@ -9,7 +9,7 @@
 
 (3) Run
 
-        user$: source runscript3.sh
+        user$: source run_script3.sh
 
 (4) With luck and a fair wind, the server should now be running. Open a new tab and start the celery worker:
 
